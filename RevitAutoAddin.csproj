@@ -9,6 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\edit.png" />
+    <None Remove="images\edited.png" />
+    <None Remove="images\search-alt.png" />
     <None Remove="images\text.gif" />
   </ItemGroup>
 
@@ -18,6 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="images\close.png" />
+    <Resource Include="images\edit.png" />
+    <Resource Include="images\edited.png" />
+    <Resource Include="images\search-alt.png" />
     <Resource Include="images\text.gif" />
   </ItemGroup>
 

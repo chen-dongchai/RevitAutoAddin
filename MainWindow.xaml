@@ -36,15 +36,24 @@
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row=" 1" Grid.Column="0">
-                    <Button x:Name="SetButton"  HorizontalAlignment="Stretch" Click="SetButton_Click" Content="设置" FontSize="15"  Height="40"/>
-                    <Button x:Name="ViewButton" HorizontalAlignment="Stretch" Click="ViewButton_Click" Content="预览" FontSize="15" Height="40"/>
-                    <Image gif:AnimationBehavior.SourceUri="/Images/text.gif"
-                                Width="80" Height="80"
-                                HorizontalAlignment="Left" 
-                                VerticalAlignment="Bottom"
-                                Margin="15,50,0,20" />
-
+                    <Button x:Name="SetButton"  HorizontalAlignment="Stretch" Click="SetButton_Click"  FontSize="15"  Height="40">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images/edit.png" Width="20" Height="20" Margin="0,0,8,0"/>
+                            <TextBlock Text="设置" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="ViewButton" HorizontalAlignment="Stretch" Click="ViewButton_Click"  FontSize="15" Height="40">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images/search-alt.png" Width="20" Height="20" Margin="0,0,8,0"/>
+                            <TextBlock Text="预览" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
                 </StackPanel>
+                <Image gif:AnimationBehavior.SourceUri="/Images/text.gif"
+                        Width="120" Height="120"
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Bottom" 
+                        Grid.Row="1"/>
 
             </Grid>
             <Grid Grid.Row="0" Grid.Column="1">
@@ -54,7 +63,9 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Grid.Column="0" Background="#FFEADB" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
-                    <Button x:Name="CloseButton" Content="X" Click="CloseButton_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" Margin="10,10,10,10" FontSize="10"/>
+                    <Button x:Name="CloseButton"  Click="CloseButton_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" Margin="10,10,10,10" FontSize="10">
+                        <Image Source="/images/close.png" Width="15" Height="15"/>
+                    </Button>
                 </Grid>
 
                 <Frame x:Name="contentFrame" NavigationUIVisibility="Hidden" Grid.Row="1" Grid.Column="0"/>

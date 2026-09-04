@@ -26,8 +26,8 @@ namespace RevitAutoAddin
             SetPage setPage = new SetPage();
             ViewPage viewPage = new ViewPage();
             _setPage = setPage;
-            _viewPage = viewPage;
-            
+            _viewPage = viewPage; 
+
         }
 
         private void SetButton_Click(object sender, RoutedEventArgs e)
